@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.flip-card {
+  background-color: transparent;
+  width: 270px;
+  height: 400px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner, .flip-card:active .flip-card-inner  {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+  
+  
+  
+}
+.hide {
+  opacity:0%;
+  position: relative;
+
+}
+
+
+
+.flip-card:hover + .hide,  .flip-card:active + .hide{
+  opacity:100%;
+  color: black;
+  transition: opacity 2s;
+}
+
+
+</style>
+</head>
+<body>
+
+<h1>Your January Tarot Prompt</h1>
+<h3>Hover over the card below to reveal your prompt:</h3>
+
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="Back.png" alt="BackSide" style="width:270px;height:400px;">
+
+    </div>
+    <div class="flip-card-back">
+		<img src="April.png" alt="FrontSide" style="width:270px;height:400px;">
+    </div>
+  </div>
+</div>
+<div class="hide"><p>The Empress is the symbol of abundance and fertility in the Tarot Deck. The Empress brings the beauty of nature in all its forms and encourages us to allow nature to ground us. When The Empress is reversed, we are called to recognize the struggles of growth and our dependency on others.</p><p><b>Challenge: You drew the upright Empress. This month, abundance is key, you cannot overdo it. Go big and give your audience more of everything.<b></p></div>
+
+
+	
+
+
+
+
+</body>
+</html>
